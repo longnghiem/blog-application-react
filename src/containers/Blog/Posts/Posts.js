@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import Post from '../../../components/Post/Post'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 export default class Posts extends Component {
+   
     render(){
         const posts = this.props.posts.map(post => 
             <Link to={"/posts/" +post.id} key={post.id}>

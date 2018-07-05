@@ -19,15 +19,13 @@ const reducer = (state = initialState, action) => {
                     posts: [...state.posts, action.data]}
 
         case 'DEL_POST':
-            console.log('action.id',typeof action.id,action.id)  
             const updatedArray = state.posts.filter(post=>
                 post.id.toString() !== action.id
             )    
-            console.log(updatedArray) 
             return {...state,
                     posts: updatedArray        
             }            
-        
+           
         default:
         return state;    
     }
