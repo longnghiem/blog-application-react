@@ -14,8 +14,8 @@ export default withRouter(class NewPost extends Component {
 
     submitHandler = (event) => {
         event.preventDefault();
-
-        this.props.submit({...this.state, id: this.props.lastId() + 1 })
+        const newId = this.props.lastId()? this.props.lastId() + 1 : 0
+        this.props.submit({...this.state, id: newId })
         this.setState({
             title: '',
             category: '',
