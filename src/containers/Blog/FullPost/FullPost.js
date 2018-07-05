@@ -5,6 +5,7 @@ import "./FullPost.css"
 export default withRouter(class FullPost extends Component {
 
     render(){
+        console.log(this.props)
         const postData = this.props.selectedPost(this.props.match.params.id);
         let post =  <section className="FullPost">
                         <h1>{postData.title}</h1>
