@@ -23,7 +23,6 @@ class FullPost extends Component {
         return post
     }
     render(){
-        console.log(this.props)
         const postData = this.getSelectedPost(this.props.match.params.id);
         let post =  <section className="FullPost">
                         <h1>{postData.title}</h1>

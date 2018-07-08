@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Post.css"
 
-const post = ({title,category,content}) => {
+const post = ({title,category}) => {
     return (
         <article className="Post" >
             <h1>{title}</h1>

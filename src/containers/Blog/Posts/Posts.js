@@ -11,7 +11,6 @@ class Posts extends Component {
                 <Post 
                     title={post.title}
                     category={post.category}
-                    content={post.content}
                     />
             </Link>        
         )

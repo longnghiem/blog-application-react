@@ -3,8 +3,9 @@ import Posts from './Posts/Posts'
 import {Route, NavLink, Switch} from 'react-router-dom'
 import Form from './Form/Form'
 import FullPost from "./FullPost/FullPost"
+import Labels from "../../components/Labels/Labels"
+import Category from "../../components/Category/Category"
 import "./Blog.css"
-import {connect} from 'react-redux'
 
 class Blog extends Component {
     render(){
@@ -19,7 +20,12 @@ class Blog extends Component {
                     </nav>
                 </header>
                 <Switch>
-                    <Route path="/" exact component={Posts}/>
+                    <Route path="/" exact render={()=>
+                        <div>
+                            <Posts />
+                            <Labels />
+                        </div>    }/>
+                    <Route path="/category/:id" exact component={Category} />
                     <Route path="/new-post" exact component={Form}/>
                     <Route path="/posts/:id" exact component={FullPost} />
                     <Route path="/edit-post/:id" exact component={Form}/>

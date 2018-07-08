@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import Post from '../Post/Post'
+import Labels from '../Labels/Labels'
+
+class Category extends Component {
+    render() {
+        const filteredPosts = this.props.posts.filter(post=>
+            post.category === this.props.match.params.id
+        )
+        
+        return (
+            <div>
+                {filteredPosts.map(post=>
+                    <Link to={"/posts/" +post.id} key={post.id}>
+                        <Post 
+                            title={post.title}
+                            category={post.category}
+                        />
+                    </Link>    
+                )}
+                <Labels />
+            </div>
+        );
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps)(Category);
