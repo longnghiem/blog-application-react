@@ -1,4 +1,4 @@
-.NewPost {
+.Form {
     width: 80%;
     margin: 20px auto;
     border: 1px solid #eee;
@@ -6,15 +6,15 @@
     text-align: center;
 }
 
-.NewPost label {
+.Form label {
     display: block;
     margin: 10px auto;
     text-align: center;
     font-weight: bold;
 }
 
-.NewPost input,
-.NewPost textarea {
+.Form input,
+.Form textarea {
     display: block;
     width: 80%;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
     margin: auto;
 }
 
-.NewPost button {
+.Form button {
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #fa923f;
@@ -32,8 +32,8 @@
     cursor: pointer;
 }
 
-.NewPost button:hover,
-.NewPost button:active {
+.Form button:hover,
+.Form button:active {
     color: white;
     background-color: #fa923f;
 }

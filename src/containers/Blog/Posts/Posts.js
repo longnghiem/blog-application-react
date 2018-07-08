@@ -3,7 +3,7 @@ import Post from '../../../components/Post/Post'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-export default class Posts extends Component {
+class Posts extends Component {
    
     render(){
         const posts = this.props.posts.map(post => 
@@ -22,3 +22,11 @@ export default class Posts extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps)(Posts)
