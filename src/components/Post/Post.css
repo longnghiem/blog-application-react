@@ -3,18 +3,14 @@
     text-align: center;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
-    margin: 1em;
     cursor: pointer;
     color: #CDCDCD;
     min-width: 400px;
+    min-height: 175px;
+    justify-self: center;
 }
 
 .Post:hover {
     background-color: #f2e5dc;
     color: #fa923f;
-}
-
-.Post * {
-    margin-right: 4em; 
-
 }

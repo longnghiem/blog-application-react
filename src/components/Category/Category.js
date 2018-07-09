@@ -13,6 +13,7 @@ class Category extends Component {
         
         return (
             <div >
+                <Labels />
                 <div className="Category">
                 {filteredPosts.map(post=>
                     <Link to={"/posts/" +post.id} key={post.id}>
@@ -23,7 +24,6 @@ class Category extends Component {
                     </Link>    
                 )}
                 </div>
-                <Labels />
             </div>
         );
     }
