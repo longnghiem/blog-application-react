@@ -15,7 +15,7 @@ class Form extends Component {
             content: ''
             }
     }
-
+    //without this func, user cannot switch to "Add new post" while being on "Editing post"
     componentDidUpdate(prevProps) {
         if(this.props.match.params.id !== prevProps.match.params.id) {
             this.setState(this.getData(this.props.match.params.id))

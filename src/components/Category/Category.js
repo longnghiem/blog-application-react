@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import Post from '../Post/Post'
 import Labels from '../Labels/Labels'
+import './Category.css'
 
 class Category extends Component {
     render() {
@@ -11,7 +12,8 @@ class Category extends Component {
         )
         
         return (
-            <div>
+            <div >
+                <div className="Category">
                 {filteredPosts.map(post=>
                     <Link to={"/posts/" +post.id} key={post.id}>
                         <Post 
@@ -20,6 +22,7 @@ class Category extends Component {
                         />
                     </Link>    
                 )}
+                </div>
                 <Labels />
             </div>
         );

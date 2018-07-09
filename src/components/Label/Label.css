@@ -2,5 +2,9 @@
     padding: 1em;;
     margin: 0.5em;
     border: 1px solid #ddd; 
-    cursor: pointer
+    cursor: pointer;
+    color: #CDCDCD;
+}
+.Label:hover {
+    color: #f2efef; 
 }

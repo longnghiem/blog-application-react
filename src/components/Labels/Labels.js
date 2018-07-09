@@ -6,8 +6,8 @@ import "./Labels.css"
 
 class Labels extends Component {
     render() {
-        const labelsArray = this.props.posts.map(post=>post.category)
-        const labels = [...new Set(labelsArray)].map((label,i)=>{
+        const allLabels = this.props.posts.map(post=>post.category)
+        const labels = [...new Set(allLabels)].map((label,i)=>{
             return (
                 <Link to={"/category/" + label} key = {i}>
                     <Label name={label} />

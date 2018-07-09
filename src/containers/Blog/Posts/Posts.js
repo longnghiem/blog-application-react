@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Post from '../../../components/Post/Post'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import './Posts.css'
 
 class Posts extends Component {
    
