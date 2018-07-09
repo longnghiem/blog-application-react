@@ -1,43 +1,29 @@
 import React, {Component} from 'react'
 import './Form.css'
-import {connect} from 'react-redux'
 
 class Form extends Component {
     constructor(props){
         super(props)
-        this.state = this.getData(this.props.match.params.id)
+        this.state = this.props.inputData
     }
-
-    getData = (id) => {
-        return id ? this.props.posts.filter(post=>post.id===Number(id))[0] : {
-            title: '',
-            category: '',
-            content: ''
-            }
-    }
+    
     //without this func, user cannot switch to "Add new post" while being on "Editing post"
     componentDidUpdate(prevProps) {
         if(this.props.match.params.id !== prevProps.match.params.id) {
-            this.setState(this.getData(this.props.match.params.id))
+            this.setState(this.props.inputData)
         }
-    }
-
-    getLastId = () => {
-        const ids = this.props.posts.map(post=> post.id)
-        ids.sort((a,b)=>a-b)
-        return ids[ids.length-1]
     }
 
     submitHandler = (event) => {
         event.preventDefault();
-        const newId = this.getLastId()>=0? this.getLastId() + 1 : 0
-        if(this.props.match.params.id) {
-            this.props.edit({...this.state})
-        } else {
-            this.props.submit({...this.state, id: newId})
-        }
+        this.props.submit(this.state)
+        this.setState({
+            title: '',
+            category: '',
+            content: ''
+        })
         this.props.history.push('/')
-    } 
+    }
 
     changeHandler = e => {
         this.setState({
@@ -74,18 +60,5 @@ class Form extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        posts: state.posts
-    }
-}
 
-const mapDispatchToProps = dispatch => {
-    return {
-        submit: (data) => dispatch({type: 'ADD_POST', data}),
-        edit: (data) => dispatch({type: 'EDIT_POST', data}),
-        
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default Form

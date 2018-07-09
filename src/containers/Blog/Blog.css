@@ -1,6 +1,7 @@
 .Blog {
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 1em; 
 }
 .Blog ul {
     list-style: none;

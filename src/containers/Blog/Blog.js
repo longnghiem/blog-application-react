@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Posts from './Posts/Posts'
 import {Route, NavLink, Switch} from 'react-router-dom'
-import Form from './Form/Form'
 import FullPost from "./FullPost/FullPost"
 import Labels from "../../components/Labels/Labels"
 import Category from "../../components/Category/Category"
+import FormContainer from "../FormContainer/FormContainer"
 import "./Blog.css"
 
 class Blog extends Component {
@@ -26,9 +26,9 @@ class Blog extends Component {
                             <Posts />
                         </div>    }/>
                     <Route path="/category/:id" exact component={Category} />
-                    <Route path="/new-post" exact component={Form}/>
+                    <Route path="/new-post" exact component={FormContainer}/>
                     <Route path="/posts/:id" exact component={FullPost} />
-                    <Route path="/edit-post/:id" exact component={Form}/>
+                    <Route path="/edit-post/:id" exact component={FormContainer}/>
                 </Switch>
             </div>    
         )
