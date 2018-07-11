@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import "./FullPost.css"
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import * as Types from '../../../store/reducers/actions'
 
 class FullPost extends Component {
 
@@ -44,7 +45,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        delete: (id) => dispatch({type: 'DEL_POST', id})
+        delete: (id) => dispatch({type: Types.DEL_POST, id})
     }
 }
 

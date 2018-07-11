@@ -1,3 +1,5 @@
+import * as Types from './actions'
+
 const initialState = {
     posts:[{ id:0,
         title: "Survival of the Richest",
@@ -40,15 +42,15 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type){
-        case 'ADD_POST':
+        case Types.ADD_POST:
             return {posts: [...state.posts, action.data]}
 
-        case 'DEL_POST':
+        case Types.DEL_POST:
             const updatedArray = state.posts.filter(post=>
                 post.id !== action.id
             )    
             return {posts: updatedArray}
-        case 'EDIT_POST':
+        case Types.EDIT_POST:
             const editedArray = state.posts.map(post=>
                 post.id === action.data.id
                   ? action.data

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import Form from './Form/Form'
+import * as Types from '../../store/reducers/actions'
 
 class FormContainer extends Component {
 
@@ -49,8 +50,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        add: data => dispatch({type: 'ADD_POST',data}),
-        edit: (data) => dispatch({type: 'EDIT_POST', data}),
+        add: data => dispatch({type: Types.ADD_POST,data}),
+        edit: (data) => dispatch({type: Types.EDIT_POST, data}),
     }
 }
 
