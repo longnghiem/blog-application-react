@@ -8,7 +8,7 @@
 
 .Form label {
     display: block;
-    margin: 10px auto;
+    margin: 1em auto;
     text-align: center;
     font-weight: bold;
     color: #CDCDCD;
@@ -22,14 +22,15 @@
     outline: none;
     margin: auto;
     text-indent: 3px;
+    
 }
 
 .Form button {
     margin: 1em 0;
     padding: 10px 20px;
-    border: 1px solid #fa923f;
+    border: 1px solid #CDCDCD;
     background-color: transparent;
-    color: #fa923f;
+    color: #CDCDCD;
     cursor: pointer;
 }
 

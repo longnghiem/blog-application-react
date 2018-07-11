@@ -6,8 +6,20 @@
     box-shadow: 0 2px 3px #ccc;
     text-align: center;
     color: #CDCDCD;
+    white-space: pre-line;
 }
 
-button {
+.FullPost button {
     margin: 1em;
+    padding: 10px 20px;
+    border: 1px solid #CDCDCD;
+    background-color: transparent;
+    color: #CDCDCD;
+    cursor: pointer;
+}
+
+.FullPost button:hover,
+.FullPost button:active {
+    color: white;
+    background-color: #fa923f;
 }

@@ -41,6 +41,12 @@ class Form extends Component {
                            value={this.state.title}
                            onChange={this.changeHandler} 
                             />
+                    <label htmlFor="intro">Introduction</label>
+                    <textarea rows="2" 
+                            value={this.state.intro}
+                            name='intro'
+                            onChange={this.changeHandler}
+                            />        
                     <label htmlFor="category">Category</label>
                     <input id="category" 
                            name="category"
@@ -49,10 +55,10 @@ class Form extends Component {
                             />
                     <label htmlFor="content">Content</label>
                     <textarea rows="4" 
-                              value={this.state.content}
-                              name='content'
-                              onChange={this.changeHandler}
-                              />
+                            value={this.state.content}
+                            name='content'
+                            onChange={this.changeHandler}
+                            />
                     <button>Save</button>          
                 </form>    
             </section>    

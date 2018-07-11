@@ -19,6 +19,7 @@ class Category extends Component {
                     <Link to={"/posts/" +post.id} key={post.id}>
                         <Post 
                             title={post.title}
+                            intro={post.intro}
                             category={post.category}
                         />
                     </Link>    

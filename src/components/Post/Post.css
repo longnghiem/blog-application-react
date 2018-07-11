@@ -15,18 +15,19 @@
     color: #fa923f;
 }
 
-.Post div {
-    background: #FFD8B9;
+.postLabel {
+    background: #CDCDCD;
     border-radius: 3px 0 0 3px;
-    color: #a3361b;
+    color: #111;
     display: inline-block;
     height: 26px;
     line-height: 26px;
     padding: 0 20px 0 23px;
     position: relative;
     margin: 0 10px 10px 0;
+    
   }
-  .Post div::before {
+  .postLabel::before {
     background: #FFFDE6;
     border-radius: 10px;
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
@@ -37,16 +38,34 @@
     left: 10px;
     top: 10px;
   }
-  .Post div::after {
+  .postLabel::after {
     background: #131314;
     border-bottom: 13px solid transparent;
-    border-left: 10px solid #FFD8B9;
+    border-left: 10px solid #CDCDCD;
+    /* border-left: 10px solid #FFD8B9; */
     border-top: 13px solid transparent;
     content: '';
     position: absolute;
     right: 0;
     top: 0;
   }
-  .Post:hover div::after {
+  .Post:hover .postLabel::after {
+      border-left: 10px solid #FFD8B9;
       background-color: #f2e5dc
+  }
+
+  .Post:hover .postLabel {
+    background: #FFD8B9; 
+    color: #a3361b; 
+  }
+
+  .Post div:first-child {
+   padding-bottom: 1em;
+   border-bottom: #CDCDCD 2px solid;
+   margin-bottom: 1em;
+}
+
+.Post:hover div:first-child{
+    border-bottom: #FFD8B9 2px solid;
+
   }

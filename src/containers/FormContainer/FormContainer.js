@@ -4,12 +4,6 @@ import Form from './Form/Form'
 
 class FormContainer extends Component {
 
-     //without this func, user cannot switch to "Add new post" while being on "Editing post"
-    componentDidUpdate(prevProps) {
-        if(this.props.match.params.id !== prevProps.match.params.id) {
-            this.forceUpdate();
-        }
-    }
 
     getData = (id) => {
         return id ? this.props.posts.filter(post=>post.id===Number(id))[0] : {
