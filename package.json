@@ -1,7 +1,7 @@
 {
   "name": "react-redux-14",
   "version": "0.1.0",
-  "homepage": "https://longnghiem.github.io/react-router-redux/",
+  "homepage": "https://longnghiem.github.io/blog-application-react/",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.2.0",
